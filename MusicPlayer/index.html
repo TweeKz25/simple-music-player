@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="circle">
+            <i class='bx bx-chevron-left' ></i>
+          </div>
+          <div class="circle">
+            <i onclick="toggleMenu()" class='bx bx-menu' id="menuIcon"></i>
+          </div>
+        </nav>
+        <img src="media/img1.jpg" class="song-img" />
+        <h1>One Second (feat. H.E.R)</h1>
+        <p>Stormzy</p>
+
+        <audio id="song">
+          <source src="media/youtube_sq6yHUoHJDk_audio.mp3" type="audio/mpeg" />
+        </audio>
+        <input type="range" value="0" id="progress" />
+
+        <div class="controls">
+          <div><i class='bx bx-rewind' ></i></div>
+          <div onclick="playPause()">
+            <i class='bx bx-play' id="ctrlIcon"></i></box-icon>
+          </div>
+          <div><i class='bx bx-fast-forward' id="nextIcon" ></i></div>
+        </div>
+      </div>
+      <div class="menu" id="menu">
+        <input type="range" value="0" id="volume" />
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
